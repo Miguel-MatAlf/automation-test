@@ -36,11 +36,16 @@ describe('webdriver', () => {
 
   describe("Unit testing", () => {
    test('Search box is empty and button search is pressed', async () => {
+    const field = await getElementByXpath(driver, "//input[@name='search']");
+    var input = await field.getText();
+    // assert
+    expect(input).toBe("");
+
     const bttn = await getElementByXpath(driver, "//button[@type='submit']");
     await bttn.click();
+
     const error = await getElementByXpath(driver, "//span[@data-error='wrong']");
     var result = await error.getText();
-   
      // assert
     expect(result).toBe("Search cannot be empty.");
    });
@@ -49,7 +54,6 @@ describe('webdriver', () => {
     await driver.get("http://localhost:3000/shows/search");
     const qry = await getElementByXpath(driver, "/html/body/pre");
     var result = await qry.getText();
-   
     // assert
     expect(result).toBe("Cannot GET /shows/search");
    });
@@ -61,7 +65,6 @@ describe('webdriver', () => {
     const bttn = await getElementByXpath(driver, "//button[@type='submit']");
     await bttn.click();
     var result = await elementLocated(driver, "//div[@class='row']");
-   
     // assert
     expect(result).toBe(true);
    });
