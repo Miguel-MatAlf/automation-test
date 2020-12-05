@@ -1,21 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results total="1" passed="1" failed="0" skipped="0">
+<testng-results total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-12-04T22:47:57Z" name="Default suite" finished-at="2020-12-04T22:48:15Z" duration-ms="18219">
+  <suite started-at="2020-12-05T18:51:51Z" name="Default suite" finished-at="2020-12-05T18:52:02Z" duration-ms="10633">
     <groups>
     </groups>
-    <test started-at="2020-12-04T22:47:57Z" name="Default test" finished-at="2020-12-04T22:48:15Z" duration-ms="18219">
+    <test started-at="2020-12-05T18:51:51Z" name="Default test" finished-at="2020-12-05T18:52:02Z" duration-ms="10633">
       <class name="testCases.task">
-        <test-method is-config="true" signature="Setup()[pri:0, instance:testCases.task@6692b6c6]" started-at="2020-12-04T16:47:57Z" name="Setup" finished-at="2020-12-04T16:48:01Z" duration-ms="3726" status="PASS">
+        <test-method is-config="true" signature="Setup()[pri:0, instance:testCases.task@272113c4]" started-at="2020-12-05T12:51:51Z" name="Setup" finished-at="2020-12-05T12:51:57Z" duration-ms="5413" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Setup -->
-        <test-method signature="AutomationTest()[pri:0, instance:testCases.task@6692b6c6]" started-at="2020-12-04T16:48:01Z" name="AutomationTest" finished-at="2020-12-04T16:48:14Z" duration-ms="13668" status="PASS">
+        <test-method signature="AutomationTest()[pri:0, instance:testCases.task@272113c4]" started-at="2020-12-05T12:51:57Z" name="AutomationTest" finished-at="2020-12-05T12:52:01Z" duration-ms="4606" status="FAIL">
+          <exception class="java.lang.IllegalMonitorStateException">
+            <message>
+              <![CDATA[current thread is not owner]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalMonitorStateException: current thread is not owner
+	at java.base/java.lang.Object.wait(Native Method)
+	at testCases.task.AutomationTest(task.java:55)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalMonitorStateException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AutomationTest -->
-        <test-method is-config="true" signature="Teardown()[pri:0, instance:testCases.task@6692b6c6]" started-at="2020-12-04T16:48:14Z" name="Teardown" finished-at="2020-12-04T16:48:15Z" duration-ms="811" status="PASS">
+        <test-method is-config="true" signature="Teardown()[pri:0, instance:testCases.task@272113c4]" started-at="2020-12-05T12:52:01Z" name="Teardown" finished-at="2020-12-05T12:52:02Z" duration-ms="605" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Teardown -->

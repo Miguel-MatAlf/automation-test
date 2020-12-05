@@ -7,10 +7,12 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class base {
 	
 	public WebDriver driver;
+	public WebDriverWait wait;
 	public Properties prop;
 	
 	public WebDriver startDriver() throws IOException {
@@ -29,11 +31,15 @@ public class base {
 			//Set properties for IE
 		}
 		
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS); //wait 10 secs before send error
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
 		
 		return driver;
-		
+	}
+	
+	public WebDriverWait startWait(WebDriver driver) {
+		wait = new WebDriverWait(driver, 5);
+		return wait;
 	}
 
 }

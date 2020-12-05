@@ -18,6 +18,7 @@ public class task extends base {
 	@BeforeTest
 	public void Setup() throws IOException {
 		driver = startDriver();
+		wait = startWait(driver);
 	}
 	@AfterTest
 	public void Teardown() {
@@ -27,8 +28,8 @@ public class task extends base {
 	@Test
 	public void AutomationTest() throws IOException, InterruptedException {
 		
-		Home_Page home = new Home_Page(driver);
-		Search_Results result = new Search_Results(driver);
+		Home_Page home = new Home_Page(driver, wait);
+		Search_Results result = new Search_Results(driver, wait);
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		String url = prop.getProperty("url");
 		
@@ -42,7 +43,7 @@ public class task extends base {
 		home.getButtonSearch().click();
 		
 //		* Navigate to the url that is show in second card of results
-		result.getURLinCard(2).click();
+		result.getURLofCard(2).click();
 		
 //		* Navigate back using browser features
 		driver.navigate().back();
@@ -60,7 +61,6 @@ public class task extends base {
 		String actual = home.getInputSearch().getText();
 		String expected = ""; 
 		assertEquals(actual, expected);
-		Thread.sleep(3000);
 	}
 
 }
