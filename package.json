@@ -14,7 +14,7 @@
     "build": "npm-run-all clean lint tsc cp-assets",
     "start": "node ."
   },
-  "author": "",
+  "author": "Miguel",
   "license": "ISC",
   "dependencies": {
     "@types/request-promise": "^4.1.45",
